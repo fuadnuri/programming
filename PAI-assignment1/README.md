@@ -1,185 +1,85 @@
 # PAI - Assignment I: Python Algorithmic Solutions
 
-Welcome to the repository for **PAI - Assignment I**. This project contains Python implementations for six classic algorithmic challenges, ranging from dynamic programming to graph theory.
+This repository contains Python implementations for six fundamental algorithmic challenges, ranging from dynamic programming and backtracking to graph theory and binary search. [cite_start]Each solution is optimized based on the constraints and hints provided in the assignment [cite: 1-80].
 
 ---
 
 ## 📋 Table of Contents
-
-* [1. Longest Increasing Subsequence](https://www.github.com/fuadnuri/programming/assignment1/blob/main/solutions.py#L1)
-* [2. Sudoku Solver](https://www.github.com/fuadnuri/programming/assignment1/blob/main/solutions.py#L1)
-* [3. N-Queens Problem](https://www.github.com/fuadnuri/programming/assignment1/blob/main/solutions.py#L1)
-* [4. Word Ladder](https://www.github.com/fuadnuri/programming/assignment1/blob/main/solutions.py#L1)
-* [5. Median of Two Sorted Arrays](https://www.github.com/fuadnuri/programming/assignment1/blob/main/solutions.py#L1)
-* [6. Graph Cycle Detection](https://www.github.com/fuadnuri/programming/assignment1/blob/main/solutions.py#L1)
+* [1. Longest Increasing Subsequence](#1-longest-increasing-subsequence)
+* [2. Sudoku Solver](#2-sudoku-solver)
+* [3. N-Queens Problem](#3-n-queens-problem)
+* [4. Word Ladder](#4-word-ladder)
+* [5. Median of Two Sorted Arrays](#5-median-of-two-sorted-arrays)
+* [6. Graph Cycle Detection](#6-graph-cycle-detection)
+* [7. Complexity Analysis](#-complexity-analysis)
 
 ---
 
 ## 🧠 Algorithms Overview
 
 ### 1. Longest Increasing Subsequence (LIS)
-
-Find the length of the longest subsequence in an array where elements are in strictly increasing order.
-
-* 
-**Method**: Dynamic Programming.
-
-
-* 
-**Time Complexity**:  (optimized from ).
-
-
-* 
-**Key Concept**: A subsequence is derived by deleting elements without changing the order of remaining elements.
+[cite_start]Find the length of the longest subsequence in an array where elements are in strictly increasing order[cite: 3].
+* [cite_start]**Method**: Dynamic Programming[cite: 9].
+* [cite_start]**Time Complexity**: $O(n^2)$ (optimized from brute force $O(2^n)$)[cite: 9].
 
 
 
 ### 2. Sudoku Solver
-
-A functional solver for a partially filled 9x9 Sudoku board.
-
-* 
-**Method**: Backtracking.
-
-
-* 
-**Logic**: Recursively fill empty spaces (represented by 0) with numbers 1-9 and backtrack if a placement is invalid.
+[cite_start]A backtracking-based function that fills a 9x9 Sudoku board[cite: 12].
+* [cite_start]**Method**: Backtracking[cite: 28].
+* [cite_start]**Logic**: Recursively tries numbers 1-9 in empty spaces and backtracks if the placement is invalid[cite: 28, 29].
 
 
 
 ### 3. N-Queens Problem
-
-Place  queens on an  chessboard so that no two queens threaten each other.
-
-* 
-**Constraints**: No two queens can be on the same row, column, or diagonal.
-
-
-* 
-**Method**: Backtracking with state tracking for diagonals.
+[cite_start]Places $N$ queens on an $N \times N$ chessboard such that no two queens threaten each other[cite: 32].
+* [cite_start]**Method**: Backtracking[cite: 41].
+* [cite_start]**Constraints**: Queens cannot share the same row, column, or diagonal[cite: 33].
 
 
 
 ### 4. Word Ladder
-
-Find the shortest transformation sequence from a `beginWord` to an `endWord` using a dictionary.
-
-* 
-**Rules**: Change one letter at a time; each intermediate word must be in the dictionary.
-
-
-* 
-**Method**: Breadth-First Search (BFS).
+[cite_start]Finds the shortest transformation sequence from a `beginWord` to an `endWord`[cite: 44].
+* [cite_start]**Method**: Breadth-First Search (BFS)[cite: 53].
+* [cite_start]**Logic**: Each word is a node, and each single-letter change forms an edge in the transformation graph[cite: 54].
 
 
 
 ### 5. Median of Two Sorted Arrays
-
-Find the median of two sorted arrays with a specific run time complexity of .
-
-* 
-**Method**: Binary Search.
-
-
-* 
-**Logic**: Partition the arrays such that the left and right halves are balanced.
-
-
+[cite_start]Calculates the median of two sorted arrays with a strict runtime complexity of $O(\log(\min(n, m)))$[cite: 58, 59].
+* [cite_start]**Method**: Binary Search[cite: 65].
 
 ### 6. Graph Cycle Detection
-
-Determine if a directed graph contains a cycle.
-
-* 
-**Method**: Depth First Search (DFS).
+[cite_start]Determines if a directed graph contains a cycle[cite: 68].
+* [cite_start]**Method**: Depth First Search (DFS)[cite: 79].
+* [cite_start]**Logic**: Uses a recursion stack to track the current path; a cycle is detected if a node in the stack is revisited[cite: 79, 80].
 
 
-* 
-**Logic**: Use a recursion stack to track visited nodes; revisiting a node in the current stack indicates a cycle.
-
-
-
----
-
-## 🛠️ Usage
-
-This project is split into two main files for clean organization:
-
-1. **`algorithms.py`**: Contains the logic for all six functions.
-2. 
-**`main.py`**: Imports the functions and runs test cases using example data provided in the assignment (e.g., LIS example array `[10, 22, 9, 33, ...]` ).
-
-
-
-### Running the Tests
-
-To verify the solutions, simply run the main script:
-
-```bash
-python main.py
-
-```
-
----
-
-> 
-> **Note**: These solutions were developed following the specific optimization hints provided in the assignment brief, such as utilizing BFS for shortest paths and backtracking for constraint satisfaction problems.
-> 
-> 
-
-Here is the updated **Complexity Analysis** section for your `README.md`. I've broken down the efficiency of each algorithm based on the methods used in the implementation.
 
 ---
 
 ## 📊 Complexity Analysis
 
-The following table summarizes the time and space complexity for each solution. These complexities reflect the optimized approaches (Dynamic Programming, BFS, and Binary Search) suggested in the assignment hints.
+The following table summarizes the time and space complexity for each solution provided in this repository.
 
 | Algorithm | Method | Time Complexity | Space Complexity |
-| --- | --- | --- | --- |
-| **Longest Increasing Subsequence** | Dynamic Programming | <br> 
+| :--- | :--- | :--- | :--- |
+| **Longest Increasing Subsequence** | Dynamic Programming | $O(n^2)$ | $O(n)$ |
+| **Sudoku Solver** | Backtracking | $O(9^{N^2})$ | $O(N^2)$ |
+| **N-Queens Problem** | Backtracking | $O(N!)$ | $O(N)$ |
+| **Word Ladder** | BFS | $O(M^2 \times N)$ | $O(M \times N)$ |
+| **Median of Two Sorted Arrays** | Binary Search | $O(\log(\min(n, m)))$ | $O(1)$ |
+| **Graph Cycle Detection** | DFS | $O(V + E)$ | $O(V)$ |
 
- |  |
-| **Sudoku Solver** | Backtracking | <br> 
-
- |  |
-| **N-Queens Problem** | Backtracking | <br> 
-
- |  |
-| **Word Ladder** | Breadth-First Search | <br> 
-
- |  |
-| **Median of Two Sorted Arrays** | Binary Search | <br> 
-
- |  |
-| **Graph Cycle Detection** | Depth First Search | <br> 
-
- |  |
+*Note: $N$ is the board size, $M$ is word length, $V$ is vertices, and $E$ is edges.*
 
 ---
 
-### 🔍 Deep Dive into Efficiency
+## 🛠️ Usage
 
-* 
-**Longest Increasing Subsequence**: While the brute force approach is , the Dynamic Programming approach reduces this significantly to  by storing sub-problem results.
+1. **`algorithms.py`**: Contains all implementation logic.
+2. [cite_start]**`main.py`**: Runs test cases using example data (e.g., LIS array `[10, 22, 9, 33, ...]` [cite: 6]).
 
-
-* 
-**Sudoku Solver**: Backtracking explores the state space by trying values 1-9. While the theoretical worst case is high, the "is_valid" constraints prune the search tree early.
-
-
-* 
-**N-Queens**: The time complexity is  because we place one queen per row and exclude occupied columns/diagonals.
-
-
-* 
-**Word Ladder**: Using BFS ensures the **shortest** path is found.  represents the length of the word, and  is the total number of words in the dictionary.
-
-
-* 
-**Median of Two Arrays**: By using Binary Search to find the correct partition point, we avoid merging the arrays, meeting the strict  requirement.
-
-
-* 
-**Cycle Detection**: DFS is used to traverse the graph. If a node currently in the recursion stack is encountered again, a cycle is confirmed.
-
+To run the project:
+```bash
+python main.py
